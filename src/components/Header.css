@@ -1,0 +1,55 @@
+.header-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Espacia los elementos (izquierda y derecha) */
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.089); /* Fondo semi-transparente */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.profile-pic {
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 200px; /* Cambiado para ser más pequeño */
+  height: auto; /* Mantiene la relación de aspecto */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin-bottom: 20px; /* Reduce el margen inferior */
+}
+
+.header-title {
+  flex-grow: 1; /* Permite que el título use el espacio disponible */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  max-width: 600px; /* Reduce el tamaño máximo */
+}
+
+.header-title h1 {
+  font-size: 2.5rem; /* Reduce el tamaño de la fuente del título */
+  padding-bottom: 20px; /* Reduce el padding inferior */
+  color: #FFFFFF; /* Color del texto del título */
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+  margin: 0; /* Elimina el margen para un mejor centrado */
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .profile-pic {
+    max-width: 150px; /* Ajusta aún más en pantallas pequeñas */
+  }
+  
+  .header-title h1 {
+    font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .header-container {
+    flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+    align-items: center; /* Centra el contenido */
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    margin: 10px; /* Reduce el margen en pantallas pequeñas */
+  }
+  section {
+    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+  }
+}

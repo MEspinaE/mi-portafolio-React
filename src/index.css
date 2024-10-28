@@ -1,0 +1,56 @@
+/* Estilo general para el body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1919; /* Fondo negro para el cuerpo */
+  color: #FFFFFF; /* Color del texto */
+}
+
+/* Encabezado */
+.header-container {
+  display: flex;
+  flex-direction: column; /* Cambio a columna para alinear el menú desplegable y la imagen de perfil */
+  align-items: center; /* Centrar elementos */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Secciones generales */
+.section {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 1200px; /* Ancho máximo */
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header-container {
+      padding: 20px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .section {
+      padding: 15px; /* Reduce el padding en las secciones */
+      margin: 10px auto; /* Reduce el margen en las secciones */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+      padding: 10px; /* Reduce el padding en pantallas muy pequeñas */
+  }
+
+  .section {
+      padding: 10px; /* Reduce aún más el padding en secciones */
+      margin: 5px auto; /* Reduce aún más el margen en las secciones */
+  }
+
+  .header-title h1 {
+      font-size: 2rem; /* Ajusta el tamaño del texto del título en pantallas pequeñas */
+  }
+  section {
+    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+  }
+}

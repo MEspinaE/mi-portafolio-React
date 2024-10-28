@@ -1,0 +1,106 @@
+/* Estilos generales para el menú desplegable */
+.dropdown {
+    position: relative; /* Mantiene el flujo del contenedor */
+     /* Espacio en la parte inferior */
+}
+
+/* Estilo para el botón de activación del menú */
+.dropdown-toggle {
+    background-color: #185a9c; /* Color de fondo azul oscuro */
+    color: #FFFFFF; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    font-size: 2rem; /* Tamaño de la fuente */
+    min-width: 90px; /* Ancho mínimo para evitar cambios de tamaño */
+    outline: none; /* Sin contorno visible al hacer clic */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Efecto hover para el botón de activación */
+.dropdown-toggle:hover {
+    background-color: #E0E0E0; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Sombra más intensa al pasar el ratón */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    right: -16%;
+    background-color: #3A3A3A;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    padding: 10px 0;
+    z-index: 1000;
+    width: auto;
+    border: 1px solid black;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+
+/* Muestra el menú cuando está abierto */
+.dropdown-menu.show {
+    visibility: visible; /* Muestra el menú cuando está abierto */
+    opacity: 1; /* Aumenta la opacidad a 1 */
+}
+
+/* Estilo para los elementos de la lista del menú */
+.dropdown-menu li {
+    list-style: none; /* Sin viñetas */
+}
+
+/* Estilo para los enlaces dentro del menú */
+.dropdown-menu a {
+    color: #B3B3B3; /* Color del texto del menú */
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Cada ítem ocupa toda la línea */
+    font-size: 1.5rem; /* Tamaño de fuente de los elementos del menú */
+}
+
+/* Efecto hover para los enlaces del menú */
+.dropdown-menu a:hover {
+    background-color: #FFFFFF; /* Color al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+    .dropdown-toggle {
+        font-size: 1.8rem;
+        padding: 10px 20px;
+    }
+
+    .dropdown-menu {
+        width: 130%;
+        right:-16%;
+    }
+
+    .dropdown-menu a {
+        font-size: 1.4rem;
+        padding: 12px 16px; /* Ajuste de espaciado interno */
+        min-width: 150px; /* Ancho mínimo */
+        display: flex;
+        align-items: center; /* Centra verticalmente */
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-toggle {
+        font-size: 1.6rem;
+        padding: 8px 16px;
+    }
+
+    .dropdown-menu {
+        width: 130%;
+        right:-16%;
+    }
+
+    .dropdown-menu a {
+        font-size: 1.2rem;
+        padding: 10px 14px;
+        min-width: 130px; /* Ancho mínimo para pantallas muy pequeñas */
+    }
+}

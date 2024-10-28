@@ -1,0 +1,36 @@
+/* Estilos generales para la sección de información personal */
+.personal-info-section {
+  background-color: rgba(255, 255, 255, 0.089); /* Fondo semitransparente */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px auto; /* Centra la sección */
+  max-width: 800px; /* Ancho máximo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  text-align: center;
+}
+
+/* Estilo para el contenedor de texto */
+.personal-info-text {
+  color: #FFFFFF; /* Color del texto */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .personal-info-text {
+    font-size: 1.25rem; /* Reduce el tamaño de la fuente en tabletas */
+  }
+  section {
+    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-info-text {
+    font-size: 1rem; /* Reduce aún más en pantallas pequeñas */
+  }
+  section {
+    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+  }
+}

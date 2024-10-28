@@ -1,0 +1,74 @@
+/* Estilos generales para la sección de proyectos */
+.projects-section {
+  padding: 20px; 
+  margin: 20px auto;
+  text-align: center;
+  max-width: 800px;
+  background-color: rgba(252, 252, 252, 0.089);
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.h2 {
+  text-decoration: underline; /* Subrayar el texto */
+}
+
+/* Estilo individual para cada proyecto */
+.project-card {
+  background-color: rgba(252, 252, 252, 0.089); /* Fondo negro para cada proyecto */
+  color: white; /* Color del texto blanco para contraste */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: transform 0.3s; /* Transición suave para hover */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 250px;
+}
+
+/* Efecto hover para las tarjetas de proyecto */
+.project-card:hover {
+  transform: translateY(-5px); /* Eleva ligeramente la tarjeta al pasar el ratón */
+}
+
+/* Estilos de la lista de proyectos */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+  gap: 20px; /* Espaciado entre proyectos */
+  margin: 0 auto; /* Centra la sección */
+}
+
+.project-title {
+  text-decoration: underline; /* Subrayar el texto */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  }
+
+  .project-card {
+    padding: 10px;
+    margin-left: 9%; /* Ajusta el padding para móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr); /* 1 columna en pantallas pequeñas */
+  }
+
+  .project-card {
+    padding: 8px; /* Reduce el padding */
+  }
+  section {
+    margin: 20px 15px; /* Margen pequeño en los lados y en la parte superior */
+  }
+}
