@@ -1,6 +1,6 @@
-/* Estilos generales para la sección de tecnologías */
+
 #technologies {
-  background-color: rgba(252, 252, 252, 0.089); /* Fondo */
+  background-color: rgba(252, 252, 252, 0.089); 
   padding: 20px;
   border-radius: 8px;
   margin: 20px auto;
@@ -8,28 +8,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   text-decoration: underline;
 }
 
-/* Estilo para la lista de tecnologías */
 .technologies-grid {
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 25px;
-  
-  
 }
 
-/* Estilo para cada tecnología */
 .technology-item {
   background-color: #185a9c;
   color: white;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100px;
@@ -37,38 +34,51 @@
   font-size: 3rem;
 }
 
-/* Responsividad */
+.technology-item span {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.technology-item:hover {
+  background-color: #0b3d7a; 
+  transform: scale(1.20); 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
 
-/* Ajuste en pantallas pequeñas */
+.technology-item:hover span {
+  color: #ffffff; 
+}
+
+
 @media (max-width: 768px) {
   #technologies {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    margin: 10px 15px; 
   }
   .technologies-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    grid-template-columns: repeat(2, 1fr); 
   }
   section {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    margin: 10px 15px; 
   }
 }
 
-/* Pantallas muy pequeñas */
 @media (max-width: 480px) {
   #technologies {
-    margin: 15px; /* Más margen para pantallas muy pequeñas */
+    margin: 15px; 
   }
   .technologies-grid {
-    grid-template-columns: repeat(2, 1fr); /* 1 columna en pantallas pequeñas */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-/* Pantallas extra pequeñas */
 @media (max-width: 320px) {
   #technologies {
-    margin: 5px; /* Más margen para pantallas extra pequeñas */
+    margin: 5px; 
   }
   .technologies-grid {
-    grid-template-columns: 1fr; /* 1 columna en pantallas extra pequeñas */
+    grid-template-columns: 1fr; 
   }
 }
 

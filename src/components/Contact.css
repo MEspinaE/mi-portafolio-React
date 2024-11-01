@@ -1,65 +1,62 @@
-/* Estilo general para la sección de contacto */
+
 #contact-section {
-  text-align: center; /* Centrar texto en la sección */
-  margin: 20px auto; /* Margen vertical y centrado horizontal */
-  max-width: 800px; /* Ancho máximo para la sección */
-  padding: 20px; /* Espaciado interno para la sección */
-  background-color: rgba(252, 252, 252, 0.089); /* Color de fondo más claro */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  text-align: center; 
+  margin: 20px auto; 
+  max-width: 800px; 
+  padding: 20px; 
+  background-color: rgba(252, 252, 252, 0.089); 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Estilo para el encabezado */
+
 #contact-section h2 {
-  margin-bottom: 20px; /* Espacio debajo del encabezado */
+  margin-bottom: 20px; 
 }
 
-/* Estilo para los botones de contacto */
+
 .contact-buttons {
   
-  display: flex; /* Usar flexbox para alinear los botones */
-  justify-content: center; /* Centrar los botones horizontalmente */
-  flex-wrap: wrap; /* Permitir que los botones se ajusten a la siguiente línea si es necesario */
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
 }
 
-/* Estilo para cada botón de contacto */
+
 .contact-button {
-  background-color: #185a9c; /* Color de fondo del botón */
-  color: white; /* Color del ícono */
-  margin: 15px; /* Margen alrededor de los botones */
-  padding: 15px; /* Espaciado interno */
-  border-radius: 50%; /* Hacer el botón circular */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para transformación y sombra */
-  display: flex; /* Para centrar el ícono dentro del botón */
-  align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  width: 75px; /* Ancho fijo para mantenerlo circular */
-  height: 75px; /* Alto fijo para mantenerlo circular */
+  background-color: #185a9c; 
+  color: white; 
+  margin: 15px; 
+  padding: 15px; 
+  border-radius: 50%; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 50px; 
+  height: 50px; 
 }
 
-/* Efecto hover para el botón */
+
 .contact-button:hover {
-  transform: scale(1.1); /* Aumentar ligeramente el tamaño del botón al pasar el ratón */
-  box-shadow: 0 0 40px rgba(14, 110, 219, 0.74); /* Sombra circular */
+  transform: scale(1.1); 
+  box-shadow: 0 0 40px rgba(14, 110, 219, 0.74); 
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
   .contact-button {
-    width: 60px; /* Disminuir el tamaño en pantallas pequeñas */
-    height: 60px; /* Disminuir el tamaño en pantallas pequeñas */    
-  }
-  section {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    width: 60px; 
+    height: 60px; 
   }
 }
 
 @media (max-width: 480px) {
   .contact-button {
-    width: 50px; /* Disminuir aún más en pantallas muy pequeñas */
-    height: 50px; /* Disminuir aún más en pantallas muy pequeñas */
+    width: 50px; 
+    height: 50px; 
   }
   section {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    margin: 10px 15px; 
   }
 }

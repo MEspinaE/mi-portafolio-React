@@ -1,6 +1,6 @@
 import React from 'react';
-import './Contact.css'; // Asegúrate de tener estilos para los botones
-import { FaInstagram, FaEnvelope, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa'; // Importar íconos
+import './Contact.css'; 
+import { FaInstagram, FaEnvelope, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa'; 
 
 const Contact = () => {
   return (

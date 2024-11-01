@@ -1,41 +1,40 @@
-/* Estilos generales para la sección de presentación */
 .presentation-section {
-  background-color: rgba(255, 255, 255, 0.089);/* Fondo semitransparente */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  margin: 20px auto; /* Centra la sección */
-  max-width: 800px; /* Ancho máximo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 8px; 
+  padding: 20px; 
+  margin: 20px auto; 
+  max-width: 800px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   text-align: center;
+  
 }
 
-/* Estilo para el texto de presentación */
 .presentation-text {
-  font-size: 1.5rem; /* Tamaño de fuente base */
-  color: #FFFFFF; /* Color del texto */
-  line-height: 1.6; /* Espaciado entre líneas */
+  font-size: 1.5rem; 
+  color: #FFFFFF; 
+  line-height: 1.6; 
   text-align: justify;
+  
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
   .presentation-text {
-    font-size: 1.2rem; /* Reduce el tamaño de la fuente en pantallas medianas */
+    font-size: 1.2rem; 
   }
   section {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    margin: 10px 15px; 
   }
 }
 
 @media (max-width: 480px) {
   .presentation-section {
-    padding: 40px; /* Margen interno para separar el texto de los bordes en pantallas pequeñas */
-     /* Margen pequeño en los lados y en la parte superior */
+    padding: 40px; 
+     
   }
   .presentation-text {
-    font-size: 1.1rem; /* Reduce aún más el tamaño de la fuente en pantallas pequeñas */
+    font-size: 1.1rem; 
   }
   section {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    margin: 10px 15px; 
   }
 }

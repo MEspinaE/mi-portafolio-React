@@ -1,56 +1,72 @@
-/* Estilo general para el body */
+/* Estilo original */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1a1919; /* Fondo negro para el cuerpo */
-  color: #FFFFFF; /* Color del texto */
+  background-color: #070707; 
+  color: #FFFFFF; 
 }
 
-/* Encabezado */
+p {
+  margin: 1.8rem;
+  font-size: 1.3rem;
+}
+
 .header-container {
   display: flex;
-  flex-direction: column; /* Cambio a columna para alinear el menú desplegable y la imagen de perfil */
-  align-items: center; /* Centrar elementos */
+  flex-direction: column; 
+  align-items: center; 
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
-/* Secciones generales */
 .section {
   margin: 20px auto;
   padding: 20px;
   border-radius: 5px;
-  max-width: 1200px; /* Ancho máximo */
+  max-width: 1200px; 
   text-align: center;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .header-container {
-      padding: 20px; /* Reduce el padding en pantallas pequeñas */
+      padding: 20px; 
   }
 
   .section {
-      padding: 15px; /* Reduce el padding en las secciones */
-      margin: 10px auto; /* Reduce el margen en las secciones */
+      padding: 15px; 
+      margin: 10px auto; 
   }
 }
 
 @media (max-width: 480px) {
   .header-container {
-      padding: 10px; /* Reduce el padding en pantallas muy pequeñas */
+      padding: 10px; 
   }
 
   .section {
-      padding: 10px; /* Reduce aún más el padding en secciones */
-      margin: 5px auto; /* Reduce aún más el margen en las secciones */
+      padding: 10px; 
+      margin: 5px auto; 
   }
 
   .header-title h1 {
-      font-size: 2rem; /* Ajusta el tamaño del texto del título en pantallas pequeñas */
+      font-size: 2rem; 
   }
   section {
-    margin: 10px 15px; /* Margen pequeño en los lados y en la parte superior */
+    margin: 10px 15px; 
+  }
+}
+
+/* Efecto de iluminación alrededor del cursor */
+.pointer-events-none {
+  pointer-events: none; /* Permite que los clics pasen a través de esta capa */
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  transition: background 0.3s ease;
+}
+/* Ocultar capa de iluminación en dispositivos móviles */
+@media (max-width: 768px) {
+  .luz {
+    display: none;
   }
 }

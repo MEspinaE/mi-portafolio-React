@@ -1,41 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import PersonalInfo from './components/PersonalInfo';
 import Technologies from './components/Technologies';
-import Presentation from './components/Presentation'; // Asegúrate de importar Presentation
-import './index.css'; // Asegúrate de importar tu archivo CSS global
+import Presentation from './components/Presentation';
+import './index.css';
 
 const App = () => {
-  return (
-    <div style={{ minHeight: '100vh', color: 'white' }}>
-      <header>
-        <Header />
-      </header>
-      <main>
-        <section id="Presentation">
-          <Presentation /> {/* Sección de presentación */}
-        </section>
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-        <section id="personal-info">
-          <PersonalInfo /> {/* Sección de información personal */}
-        </section>
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setMousePosition({ x: e.pageX, y: e.pageY });
+        };
+        window.addEventListener('mousemove', handleMouseMove);
 
-        <section id="technologies">
-          <Technologies /> {/* Sección de tecnologías usadas */}
-        </section>
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
-        <section id="projects">
-          <Projects />
-        </section>
+    return (
+        <div style={{ minHeight: '100vh', color: 'white', position: 'relative' }}>
+            {/* Capa de iluminación */}
+            <div
+                className="luz"
+                style={{
+                    position: 'fixed',
+                    left: `${mousePosition.x - 350}px`,
+                    top: `${mousePosition.y - window.scrollY - 350}px`, // Ajuste para mantener el centro con scroll
+                    width: '700px',
+                    height: '700px',
+                    background: `radial-gradient(circle, rgba(225, 225, 225, 0.08) 0%, transparent 70%)`,
+                    pointerEvents: 'none',
+                    zIndex: 0,
+                    borderRadius: '50%',
+                    transition: 'background 0.3s',
+                }}
+            ></div>
 
-        <section id="contact">
-          <Contact />
-        </section>
-      </main>
-    </div>
-  );
+            {/* Contenido de la aplicación */}
+            <header>
+                <Header />
+            </header>
+            <main style={{ position: 'relative', zIndex: 10 }}>
+                <section id="Presentation">
+                    <Presentation />
+                </section>
+
+                <section id="personal-info">
+                    <PersonalInfo />
+                </section>
+
+                <section id="technologies">
+                    <Technologies />
+                </section>
+
+                <section id="projects">
+                    <Projects />
+                </section>
+
+                <section id="contact">
+                    <Contact />
+                </section>
+            </main>
+        </div>
+    );
 };
 
 export default App;
