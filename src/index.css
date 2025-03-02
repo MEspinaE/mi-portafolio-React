@@ -1,13 +1,24 @@
-/* Estilo original */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #070707; 
-  color: #FFFFFF; 
+/* Paleta mejorada manteniendo estilo oscuro */
+:root {
+  --bg-dark: #121212;
+  --bg-card: rgba(42, 42, 46, 0.4);
+  --text-primary: #f0f0f0;
+  --text-secondary: #bbbbbb;
+  --accent-blue: #2c7fb8;
+  --accent-highlight: #3a8bc8;
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --header-bg: rgba(48, 48, 54, 0.25);
 }
 
-p {
-  margin: 1.8rem;
-  font-size: 1.3rem;
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+  background-image: radial-gradient(circle at 30% 10%, rgba(64, 64, 100, 0.12) 0%, transparent 70%),
+                    radial-gradient(circle at 80% 90%, rgba(40, 90, 140, 0.08) 0%, transparent 70%);
+  background-attachment: fixed;
 }
 
 .header-container {
@@ -15,16 +26,56 @@ p {
   flex-direction: column; 
   align-items: center; 
   padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+  background: var(--header-bg);
+  box-shadow: 0 6px 12px var(--shadow-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
 }
 
 .section {
   margin: 20px auto;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   max-width: 1200px; 
   text-align: center;
+  background-color: var(--bg-card);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-highlight);
+  text-decoration: none;
+}
+
+button, .button {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .button:hover {
+  background-color: var(--accent-highlight);
+  transform: translateY(-2px);
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
@@ -69,4 +120,14 @@ p {
   .luz {
     display: none;
   }
+}
+
+/* Animaciones sutiles para los elementos de la interfaz */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section, .header-container {
+  animation: fadeIn 0.5s ease forwards;
 }

@@ -2,7 +2,7 @@
   background-color: rgba(255, 255, 255, 0.089); 
   border-radius: 8px; 
   padding: 20px; 
-  margin: 20px auto; 
+  margin: 0 auto; 
   max-width: 800px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   text-align: center;
@@ -10,24 +10,46 @@
 
 .personal-info-text {
   color: #FFFFFF; 
-  font-size: 1.5rem; 
-  line-height: 1.6; 
+  
 }
+.info-container{
+  background-color: rgba(255, 255, 255, 0.089); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px;
+  padding: 20px;
+  margin: 34px;
+  
+}
+.personal-info-section h2{
+  text-decoration: underline;
+  font-size: 1.8rem;
+}
+
+.personal-info-item{
+  max-width: 500px;
+  display: contents;
+
+}
+.personal-info-item p{
+  margin: 2rem;
+  font-size: 1.5rem;  
+}
+
 
 @media (max-width: 768px) {
   .personal-info-text {
     font-size: 1.25rem; 
   }
-  section {
-    margin: 10px 15px; 
-  }
 }
 
 @media (max-width: 480px) {
-  .personal-info-text {
-    font-size: 1rem; 
+  .personal-info-item p{
+    font-size: 1rem;
   }
-  section {
-    margin: 10px 15px; 
+  .info-container{
+    margin: 0;
+  }
+  .personal-info-section h2{
+    font-size: 1.25rem;
   }
 }

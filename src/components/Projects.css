@@ -11,24 +11,35 @@
 .h2 {
   text-decoration: underline;
   margin: 30px;
-
 }
 
- .project-card {
-  background-color: rgba(252, 252, 252, 0.089);    color: white;    border-radius: 5px;    padding: 15px;    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);    transition: transform 0.3s, background-color 0.3s;    display: flex;
+.project-card {
+  background-color: rgba(252, 252, 252, 0.089);
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   max-width: 250px;
-  text-decoration: none;  }
-.project-card i {
-  color: #ffffff;  }
+  height: 280px; 
+  position: relative;
+  padding-bottom: 60px;
+}
 
- .project-card:hover {
-  transform: translateY(-18px);    
+.project-card i {
+  color: #ffffff;
+  margin-bottom: 25px; 
+}
+
+.project-card:hover {
+  transform: translateY(-10px);    
   background-color: rgba(24, 90, 156, 0.7);  
- }
+}
 
 .project-list {
   display: grid;
@@ -41,8 +52,61 @@
 .project-title {
   text-decoration: underline;    
   color: #ffffff;   
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 1.5rem;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  font-size: 0.85rem;
+}
+
+.github-button {
+  background-color: #24292e;
+  color: white;
+}
+
+.demo-button {
+  background-color: #0077b5;
+  color: white;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-button:hover {
+  background-color: #2f363d;
+}
+
+.demo-button:hover {
+  background-color: #045177;
+}
+
+.project-button i {
+  margin-right: 5px;
+  margin-bottom: 0; /* Resetear el margen inferior para los íconos dentro de botones */
 }
 
 @media (max-width: 768px) {
@@ -55,6 +119,16 @@
     margin: 0; 
     max-width: 90%; 
     box-sizing: border-box; 
+    height: 300px; /* Aumentado para más espacio en tabletas */
+  }
+  
+  .project-buttons {
+    padding: 0 0px;
+  }
+  
+  .project-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 }
 
@@ -62,15 +136,29 @@
   .project-list {
     grid-template-columns: repeat(1, 1fr); 
   }
-
+  .project-title{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
   .project-card {
-    padding: 8px;    
+    padding: 15px;    
     max-width: 90%; 
     width: 100%; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    height: auto;
+    min-height: 280px; /* Aumentado el mínimo height */
+  }
+  .projects-section {
+    margin: 20px 15px; 
   }
   
-  section {
-    margin: 20px 15px;    
+  .project-buttons {
+    position: relative;
+    margin-top: 30px; /* Aumentado para más separación en móviles */
+    bottom: auto;
+  }
+  
+  .project-card i {
+    margin-bottom: 20px; /* Ajustado para móviles */
   }
 }

@@ -1,45 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs, FaGitAlt, FaGithub, FaPython } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiExpress } from 'react-icons/si'; 
+import { SiJavascript, SiTailwindcss, SiExpress } from 'react-icons/si';
 import './Technologies.css';
 
 const Technologies = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const technologies = [
+    { icon: <FaReact title="React" />, name: 'React' },
+    { icon: <SiJavascript title="JavaScript" />, name: 'JavaScript' },
+    { icon: <FaPython title="Python" />, name: 'Python' },
+    { icon: <FaCss3Alt title="CSS" />, name: 'CSS' },
+    { icon: <FaHtml5 title="HTML" />, name: 'HTML' },
+    { icon: <SiTailwindcss title="Tailwind CSS" />, name: 'Tailwind CSS' },
+    { icon: <FaNodeJs title="Node.js" />, name: 'Node.js' },
+    { icon: <FaGithub title="GitHub" />, name: 'GitHub' }
+  ];
+
   return (
+    
     <section id="technologies">
       <h2>Tecnologías Usadas</h2>
       <div className="technologies-grid">
-        <div className="technology-item">
-          <FaReact title="React" />
-          <span>React</span>
-        </div>
-        <div className="technology-item">
-          <SiJavascript title="JavaScript" />
-          <span>JavaScript</span>
-        </div>
-        <div className="technology-item">
-          <FaPython title="Python" />
-          <span>Python</span>
-        </div>
-        <div className="technology-item">
-          <FaCss3Alt title="CSS" />
-          <span>CSS</span>
-        </div>
-        <div className="technology-item">
-          <FaHtml5 title="HTML" />
-          <span>HTML</span>
-        </div>
-        <div className="technology-item">
-          <SiTailwindcss title="Tailwind CSS" />
-          <span>Tailwind CSS</span>
-        </div>
-        <div className="technology-item">
-          <FaNodeJs title="Node.js" />
-          <span>Node.js</span>
-        </div>
-        <div className="technology-item">
-          <FaGithub title="GitHub" />
-          <span>GitHub</span>
-        </div>
+        
+        {technologies.map((tech, index) => (
+          <div
+            key={index}
+            className={`technology-item ${hoveredIndex === index ? 'focused' : hoveredIndex !== null ? 'blurred' : ''}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {tech.icon}
+            <span>{tech.name}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

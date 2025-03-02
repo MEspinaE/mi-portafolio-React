@@ -1,27 +1,8 @@
-
-#contact-section {
-  text-align: center; 
-  margin: 20px auto; 
-  max-width: 800px; 
-  padding: 20px; 
-  background-color: rgba(252, 252, 252, 0.089); 
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-
-#contact-section h2 {
-  margin-bottom: 20px; 
-}
-
-
 .contact-buttons {
-  
   display: flex; 
   justify-content: center; 
   flex-wrap: wrap; 
 }
-
 
 .contact-button {
   background-color: #185a9c; 
@@ -33,28 +14,24 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  width: 50px; 
-  height: 50px; 
 }
-
 
 .contact-button:hover {
   transform: scale(1.1); 
   box-shadow: 0 0 40px rgba(14, 110, 219, 0.74); 
 }
 
-
 @media (max-width: 768px) {
   .contact-button {
-    width: 60px; 
-    height: 60px; 
+    width: 45px; 
+    height: 45px; 
   }
 }
 
 @media (max-width: 480px) {
   .contact-button {
-    width: 50px; 
-    height: 50px; 
+    width: 30px; 
+    height: 30px; 
   }
   section {
     margin: 10px 15px; 
